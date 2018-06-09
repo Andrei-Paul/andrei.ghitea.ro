@@ -1,0 +1,39 @@
+{
+  "title": "Thoughts",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b6ba172bf4007e60",
+      "text": "[[Free Will]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Thoughts",
+        "story": []
+      },
+      "date": 1528571964639
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b6ba172bf4007e60"
+      },
+      "id": "b6ba172bf4007e60",
+      "type": "add",
+      "date": 1528572013264
+    },
+    {
+      "type": "edit",
+      "id": "b6ba172bf4007e60",
+      "item": {
+        "type": "paragraph",
+        "id": "b6ba172bf4007e60",
+        "text": "[[Free Will]]"
+      },
+      "date": 1528572170810
+    }
+  ]
+}
