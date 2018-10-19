@@ -9,7 +9,7 @@
     {
       "type": "paragraph",
       "id": "d66f94e6f201b813",
-      "text": "This is where I write about Tech, Thoughts, Things that Work. For me, at least."
+      "text": "This is where I write about Tech, Thoughts, [[Things that Work]]. For me, at least."
     },
     {
       "type": "paragraph",
@@ -239,6 +239,16 @@
       ],
       "id": "7b56f22a4b9ee974",
       "date": 1494082111815
+    },
+    {
+      "type": "edit",
+      "id": "d66f94e6f201b813",
+      "item": {
+        "type": "paragraph",
+        "id": "d66f94e6f201b813",
+        "text": "This is where I write about Tech, Thoughts, [[Things that Work]]. For me, at least."
+      },
+      "date": 1539973643679
     }
   ]
 }
