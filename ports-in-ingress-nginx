@@ -1,0 +1,14 @@
+{
+  "title": "Ports in ingress-nginx",
+  "story": [],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Ports in ingress-nginx",
+        "story": []
+      },
+      "date": 1539976472462
+    }
+  ]
+}
