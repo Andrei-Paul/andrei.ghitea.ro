@@ -1,6 +1,17 @@
 {
   "title": "Things that Work",
-  "story": [],
+  "story": [
+    {
+      "type": "pagefold",
+      "id": "376ed352498101d4",
+      "text": "Tectonic"
+    },
+    {
+      "type": "paragraph",
+      "id": "565200eefde84aed",
+      "text": "Open other [[ports in ingress-nginx]]"
+    }
+  ],
   "journal": [
     {
       "type": "create",
@@ -9,6 +20,45 @@
         "story": []
       },
       "date": 1539973664167
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "376ed352498101d4"
+      },
+      "id": "376ed352498101d4",
+      "type": "add",
+      "date": 1539976577286
+    },
+    {
+      "type": "edit",
+      "id": "376ed352498101d4",
+      "item": {
+        "type": "pagefold",
+        "id": "376ed352498101d4",
+        "text": "Tectonic"
+      },
+      "date": 1539976590436
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "565200eefde84aed"
+      },
+      "id": "565200eefde84aed",
+      "type": "add",
+      "after": "376ed352498101d4",
+      "date": 1539976594847
+    },
+    {
+      "type": "edit",
+      "id": "565200eefde84aed",
+      "item": {
+        "type": "paragraph",
+        "id": "565200eefde84aed",
+        "text": "Open other [[ports in ingress-nginx]]"
+      },
+      "date": 1539976625664
     }
   ]
 }
