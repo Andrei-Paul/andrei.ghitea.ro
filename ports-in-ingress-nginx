@@ -1,6 +1,62 @@
 {
   "title": "Ports in ingress-nginx",
-  "story": [],
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "562598a20b1c04a1",
+      "text": "Under [ 📁Workloads ], select:"
+    },
+    {
+      "type": "markdown",
+      "id": "8f424692bce9cf14",
+      "text": "> Daemon sets"
+    },
+    {
+      "type": "paragraph",
+      "id": "e7fac6e0dbdf70f4",
+      "text": "From the [ Namespace: ] dropdown, select:"
+    },
+    {
+      "type": "paragraph",
+      "id": "58e45b7636fe94b7",
+      "text": "tectonic-system"
+    },
+    {
+      "type": "paragraph",
+      "id": "0c767f602e3dcfd2",
+      "text": "In the [ Daemon Sets ] list, locate and select:"
+    },
+    {
+      "type": "paragraph",
+      "id": "d3f829b2cdc825f6",
+      "text": "⚙(DS) tectonic-ingress-controller"
+    },
+    {
+      "type": "paragraph",
+      "id": "56b83ee1b439ed1b",
+      "text": "Select the [ YAML ] tab and locate the ports section:"
+    },
+    {
+      "type": "code",
+      "id": "d019c99791392d39",
+      "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP"
+    },
+    {
+      "type": "paragraph",
+      "id": "dfe88675791f5e0c",
+      "text": "Append your port descriptions giving them a name, the port number and the protocol to be used."
+    },
+    {
+      "type": "paragraph",
+      "id": "0e17e9304b3ebd27",
+      "text": "For example, appending DNS port descriptions for DNS services:"
+    },
+    {
+      "type": "code",
+      "id": "8fc66c436de89b04",
+      "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP\n            - name: dns-tcp\n              hostPort: 53\n              containerPort: 53\n              protocol: TCP\n            - name: dns-udp\n              hostPort: 53\n              containerPort: 53\n              protocol: UDP"
+    }
+  ],
   "journal": [
     {
       "type": "create",
@@ -9,6 +65,225 @@
         "story": []
       },
       "date": 1539976472462
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "562598a20b1c04a1"
+      },
+      "id": "562598a20b1c04a1",
+      "type": "add",
+      "date": 1539994048473
+    },
+    {
+      "type": "edit",
+      "id": "562598a20b1c04a1",
+      "item": {
+        "type": "paragraph",
+        "id": "562598a20b1c04a1",
+        "text": "Under [ 📁Workloads ], select:"
+      },
+      "date": 1539994052141
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8f424692bce9cf14"
+      },
+      "id": "8f424692bce9cf14",
+      "type": "add",
+      "after": "562598a20b1c04a1",
+      "date": 1539994072569
+    },
+    {
+      "type": "edit",
+      "id": "8f424692bce9cf14",
+      "item": {
+        "type": "markdown",
+        "id": "8f424692bce9cf14",
+        "text": "> Daemon sets"
+      },
+      "date": 1539994082856
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e7fac6e0dbdf70f4"
+      },
+      "id": "e7fac6e0dbdf70f4",
+      "type": "add",
+      "after": "8f424692bce9cf14",
+      "date": 1539994089317
+    },
+    {
+      "type": "edit",
+      "id": "e7fac6e0dbdf70f4",
+      "item": {
+        "type": "paragraph",
+        "id": "e7fac6e0dbdf70f4",
+        "text": "From the [ Namespace: ] dropdown, select:"
+      },
+      "date": 1539994093235
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "58e45b7636fe94b7"
+      },
+      "id": "58e45b7636fe94b7",
+      "type": "add",
+      "after": "e7fac6e0dbdf70f4",
+      "date": 1539994110894
+    },
+    {
+      "type": "edit",
+      "id": "58e45b7636fe94b7",
+      "item": {
+        "type": "paragraph",
+        "id": "58e45b7636fe94b7",
+        "text": "tectonic-system"
+      },
+      "date": 1539994116022
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0c767f602e3dcfd2"
+      },
+      "id": "0c767f602e3dcfd2",
+      "type": "add",
+      "after": "58e45b7636fe94b7",
+      "date": 1539994119743
+    },
+    {
+      "type": "edit",
+      "id": "0c767f602e3dcfd2",
+      "item": {
+        "type": "paragraph",
+        "id": "0c767f602e3dcfd2",
+        "text": "In the [ Daemon Sets ] list, locate and select:"
+      },
+      "date": 1539994123654
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d3f829b2cdc825f6"
+      },
+      "id": "d3f829b2cdc825f6",
+      "type": "add",
+      "after": "0c767f602e3dcfd2",
+      "date": 1539994132913
+    },
+    {
+      "type": "edit",
+      "id": "d3f829b2cdc825f6",
+      "item": {
+        "type": "paragraph",
+        "id": "d3f829b2cdc825f6",
+        "text": "⚙(DS) tectonic-ingress-controller"
+      },
+      "date": 1539994136886
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "56b83ee1b439ed1b"
+      },
+      "id": "56b83ee1b439ed1b",
+      "type": "add",
+      "after": "d3f829b2cdc825f6",
+      "date": 1539994146146
+    },
+    {
+      "type": "edit",
+      "id": "56b83ee1b439ed1b",
+      "item": {
+        "type": "paragraph",
+        "id": "56b83ee1b439ed1b",
+        "text": "Select the [ YAML ] tab and locate the ports section:"
+      },
+      "date": 1539994149043
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d019c99791392d39"
+      },
+      "id": "d019c99791392d39",
+      "type": "add",
+      "after": "56b83ee1b439ed1b",
+      "date": 1539994151739
+    },
+    {
+      "type": "edit",
+      "id": "d019c99791392d39",
+      "item": {
+        "type": "code",
+        "id": "d019c99791392d39",
+        "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP"
+      },
+      "date": 1539994157432
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dfe88675791f5e0c"
+      },
+      "id": "dfe88675791f5e0c",
+      "type": "add",
+      "after": "d019c99791392d39",
+      "date": 1539994813032
+    },
+    {
+      "type": "edit",
+      "id": "dfe88675791f5e0c",
+      "item": {
+        "type": "paragraph",
+        "id": "dfe88675791f5e0c",
+        "text": "Append your port descriptions giving them a name, the port number and the protocol to be used."
+      },
+      "date": 1539994816935
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0e17e9304b3ebd27"
+      },
+      "id": "0e17e9304b3ebd27",
+      "type": "add",
+      "after": "dfe88675791f5e0c",
+      "date": 1539994819361
+    },
+    {
+      "type": "edit",
+      "id": "0e17e9304b3ebd27",
+      "item": {
+        "type": "paragraph",
+        "id": "0e17e9304b3ebd27",
+        "text": "For example, appending DNS port descriptions for DNS services:"
+      },
+      "date": 1539994823033
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8fc66c436de89b04"
+      },
+      "id": "8fc66c436de89b04",
+      "type": "add",
+      "after": "0e17e9304b3ebd27",
+      "date": 1539994825513
+    },
+    {
+      "type": "edit",
+      "id": "8fc66c436de89b04",
+      "item": {
+        "type": "code",
+        "id": "8fc66c436de89b04",
+        "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP\n            - name: dns-tcp\n              hostPort: 53\n              containerPort: 53\n              protocol: TCP\n            - name: dns-udp\n              hostPort: 53\n              containerPort: 53\n              protocol: UDP"
+      },
+      "date": 1539994830481
     }
   ]
 }
