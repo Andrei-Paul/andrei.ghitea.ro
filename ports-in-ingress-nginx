@@ -49,12 +49,12 @@
     {
       "type": "paragraph",
       "id": "0e17e9304b3ebd27",
-      "text": "For example, appending DNS port descriptions for DNS services:"
+      "text": "For example, appending VPN port descriptions for VPN services:"
     },
     {
       "type": "code",
       "id": "8fc66c436de89b04",
-      "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP\n            - name: dns-tcp\n              hostPort: 53\n              containerPort: 53\n              protocol: TCP\n            - name: dns-udp\n              hostPort: 53\n              containerPort: 53\n              protocol: UDP"
+      "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP\n            - name: vpn-tcp\n              hostPort: 1194\n              containerPort: 1194\n              protocol: TCP\n            - name: vpn-udp\n              hostPort: 1194\n              containerPort: 1194\n              protocol: UDP"
     }
   ],
   "journal": [
@@ -261,7 +261,7 @@
       "item": {
         "type": "paragraph",
         "id": "0e17e9304b3ebd27",
-        "text": "For example, appending DNS port descriptions for DNS services:"
+        "text": "For example, appending VPN port descriptions for VPN services:"
       },
       "date": 1539994823033
     },
@@ -281,7 +281,7 @@
       "item": {
         "type": "code",
         "id": "8fc66c436de89b04",
-        "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP\n            - name: dns-tcp\n              hostPort: 53\n              containerPort: 53\n              protocol: TCP\n            - name: dns-udp\n              hostPort: 53\n              containerPort: 53\n              protocol: UDP"
+        "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP\n            - name: vpn-tcp\n              hostPort: 53\n              containerPort: 1194\n              protocol: TCP\n            - name: vpn-udp\n              hostPort: 1194\n              containerPort: 53\n              protocol: UDP"
       },
       "date": 1539994830481
     }
