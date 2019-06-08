@@ -9,7 +9,7 @@
     {
       "type": "paragraph",
       "id": "565200eefde84aed",
-      "text": "Open other [[ports in ingress-nginx]]"
+      "text": "Open other [[http ports in ingress-nginx]]"
     }
   ],
   "journal": [
@@ -59,6 +59,16 @@
         "text": "Open other [[ports in ingress-nginx]]"
       },
       "date": 1539976625664
+    },
+    {
+      "type": "edit",
+      "id": "565200eefde84aed",
+      "item": {
+        "type": "paragraph",
+        "id": "565200eefde84aed",
+        "text": "Open other [[http ports in ingress-nginx]]"
+      },
+      "date": 1560015009572
     }
   ]
 }

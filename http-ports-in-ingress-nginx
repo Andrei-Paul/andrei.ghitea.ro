@@ -1,5 +1,5 @@
 {
-  "title": "Ports in ingress-nginx",
+  "title": "HTTP ports in ingress-nginx",
   "story": [
     {
       "type": "paragraph",
@@ -49,12 +49,12 @@
     {
       "type": "paragraph",
       "id": "0e17e9304b3ebd27",
-      "text": "For example, appending VPN port descriptions for VPN services:"
+      "text": "For example, appending HTTP Alternate port descriptions for HTTP services:"
     },
     {
       "type": "code",
       "id": "8fc66c436de89b04",
-      "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP\n            - name: vpn-tcp\n              hostPort: 1194\n              containerPort: 1194\n              protocol: TCP\n            - name: vpn-udp\n              hostPort: 1194\n              containerPort: 1194\n              protocol: UDP"
+      "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP\n            - name: http-alt\n              hostPort: 8080\n              containerPort: 8080\n              protocol: TCP"
     }
   ],
   "journal": [
@@ -284,6 +284,26 @@
         "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP\n            - name: vpn-tcp\n              hostPort: 53\n              containerPort: 1194\n              protocol: TCP\n            - name: vpn-udp\n              hostPort: 1194\n              containerPort: 53\n              protocol: UDP"
       },
       "date": 1539994830481
+    },
+    {
+      "type": "edit",
+      "id": "0e17e9304b3ebd27",
+      "item": {
+        "type": "paragraph",
+        "id": "0e17e9304b3ebd27",
+        "text": "For example, appending HTTP Alternate port descriptions for HTTP services:"
+      },
+      "date": 1560014928522
+    },
+    {
+      "type": "edit",
+      "id": "8fc66c436de89b04",
+      "item": {
+        "type": "code",
+        "id": "8fc66c436de89b04",
+        "text": "          ports:\n            - name: http\n              hostPort: 80\n              containerPort: 80\n              protocol: TCP\n            - name: https\n              hostPort: 443\n              containerPort: 443\n              protocol: TCP\n            - name: http-alt\n              hostPort: 8080\n              containerPort: 8080\n              protocol: TCP"
+      },
+      "date": 1560014960929
     }
   ]
 }
