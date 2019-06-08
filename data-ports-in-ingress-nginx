@@ -1,0 +1,226 @@
+{
+  "title": "Data ports in ingress-nginx",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "85f0efedb2b62549",
+      "text": "Under [ 📁Workloads ], select:"
+    },
+    {
+      "type": "markdown",
+      "id": "c3c19e792d660be4",
+      "text": "> Daemon sets"
+    },
+    {
+      "type": "paragraph",
+      "id": "a148a8fc8ab11c2c",
+      "text": "From the [ Namespace: ] dropdown, select:"
+    },
+    {
+      "type": "paragraph",
+      "id": "f28da42dea96c4aa",
+      "text": "tectonic-system"
+    },
+    {
+      "type": "paragraph",
+      "id": "6274ae67c02cf6a4",
+      "text": "In the [ Daemon Sets ] list, locate and select:"
+    },
+    {
+      "type": "paragraph",
+      "id": "3220038ae8d0dd2b",
+      "text": "⚙(DS) tectonic-ingress-controller"
+    },
+    {
+      "type": "paragraph",
+      "id": "1f35f8cfccbda8be",
+      "text": "Select the [ YAML ] tab and locate the args section:"
+    },
+    {
+      "type": "code",
+      "id": "1d3e2d3db4f36a85",
+      "text": "          args:\n            - /nginx-ingress-controller\n            - '--configmap=$(POD_NAMESPACE)/tectonic-custom-error'\n            - '--default-backend-service=$(POD_NAMESPACE)/default-http-backend'\n            - '--default-ssl-certificate=tectonic-system/tectonic-ingress-tls-secret'\n            - '--ingress-class=tectonic'"
+    },
+    {
+      "type": "paragraph",
+      "id": "e93ebbccbcfeeacf",
+      "text": "Append your tcp-services-configmap or tcp-services-configmap arguments giving them a config map path."
+    },
+    {
+      "type": "paragraph",
+      "id": "6faad4bfc22f9697",
+      "text": "For example, a value for each argument for a config map with the same name in the default namespace:"
+    },
+    {
+      "type": "code",
+      "id": "31333749372d63c9",
+      "text": "          args:\n            - /nginx-ingress-controller\n            - '--configmap=$(POD_NAMESPACE)/tectonic-custom-error'\n            - '--tcp-services-configmap=default/tcp-services-configmap'\n            - '--udp-services-configmap=default/udp-services-configmap'\n            - '--default-backend-service=$(POD_NAMESPACE)/default-http-backend'\n            - '--default-ssl-certificate=tectonic-system/tectonic-ingress-tls-secret'\n            - '--ingress-class=tectonic'"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Data ports in ingress-nginx",
+        "story": []
+      },
+      "date": 1560018011142
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "85f0efedb2b62549"
+      },
+      "id": "85f0efedb2b62549",
+      "type": "add",
+      "date": 1560033577613
+    },
+    {
+      "type": "edit",
+      "id": "85f0efedb2b62549",
+      "item": {
+        "type": "paragraph",
+        "id": "85f0efedb2b62549",
+        "text": "Under [ 📁Workloads ], select:"
+      },
+      "date": 1560033594536
+    },
+    {
+      "type": "add",
+      "id": "c3c19e792d660be4",
+      "item": {
+        "type": "markdown",
+        "id": "c3c19e792d660be4",
+        "text": "> Daemon sets"
+      },
+      "after": "85f0efedb2b62549",
+      "date": 1560033701000
+    },
+    {
+      "type": "add",
+      "id": "a148a8fc8ab11c2c",
+      "item": {
+        "type": "paragraph",
+        "id": "a148a8fc8ab11c2c",
+        "text": "From the [ Namespace: ] dropdown, select:"
+      },
+      "after": "c3c19e792d660be4",
+      "date": 1560033846224
+    },
+    {
+      "type": "add",
+      "id": "f28da42dea96c4aa",
+      "item": {
+        "type": "paragraph",
+        "id": "f28da42dea96c4aa",
+        "text": "tectonic-system"
+      },
+      "after": "a148a8fc8ab11c2c",
+      "date": 1560033860237
+    },
+    {
+      "type": "add",
+      "id": "6274ae67c02cf6a4",
+      "item": {
+        "type": "paragraph",
+        "id": "6274ae67c02cf6a4",
+        "text": "In the [ Daemon Sets ] list, locate and select:"
+      },
+      "after": "f28da42dea96c4aa",
+      "date": 1560034065785
+    },
+    {
+      "type": "add",
+      "id": "3220038ae8d0dd2b",
+      "item": {
+        "type": "paragraph",
+        "id": "3220038ae8d0dd2b",
+        "text": "⚙(DS) tectonic-ingress-controller"
+      },
+      "after": "6274ae67c02cf6a4",
+      "date": 1560034074775
+    },
+    {
+      "type": "add",
+      "id": "1f35f8cfccbda8be",
+      "item": {
+        "type": "paragraph",
+        "id": "1f35f8cfccbda8be",
+        "text": "Select the [ YAML ] tab and locate the args section:"
+      },
+      "after": "3220038ae8d0dd2b",
+      "date": 1560034148439
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1d3e2d3db4f36a85"
+      },
+      "id": "1d3e2d3db4f36a85",
+      "type": "add",
+      "after": "1f35f8cfccbda8be",
+      "date": 1560034822358
+    },
+    {
+      "type": "edit",
+      "id": "1d3e2d3db4f36a85",
+      "item": {
+        "type": "code",
+        "id": "1d3e2d3db4f36a85",
+        "text": "          args:\n            - /nginx-ingress-controller\n            - '--configmap=$(POD_NAMESPACE)/tectonic-custom-error'\n            - '--default-backend-service=$(POD_NAMESPACE)/default-http-backend'\n            - '--default-ssl-certificate=tectonic-system/tectonic-ingress-tls-secret'\n            - '--ingress-class=tectonic'"
+      },
+      "date": 1560034888499
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e93ebbccbcfeeacf"
+      },
+      "id": "e93ebbccbcfeeacf",
+      "type": "add",
+      "after": "1d3e2d3db4f36a85",
+      "date": 1560035895298
+    },
+    {
+      "type": "edit",
+      "id": "e93ebbccbcfeeacf",
+      "item": {
+        "type": "paragraph",
+        "id": "e93ebbccbcfeeacf",
+        "text": "Append your tcp-services-configmap or tcp-services-configmap arguments giving them a config map path."
+      },
+      "date": 1560035911535
+    },
+    {
+      "type": "add",
+      "id": "6faad4bfc22f9697",
+      "item": {
+        "type": "paragraph",
+        "id": "6faad4bfc22f9697",
+        "text": "For example, a value for each argument for a config map with the same name in the default namespace:"
+      },
+      "after": "e93ebbccbcfeeacf",
+      "date": 1560036081464
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "31333749372d63c9"
+      },
+      "id": "31333749372d63c9",
+      "type": "add",
+      "after": "6faad4bfc22f9697",
+      "date": 1560036124281
+    },
+    {
+      "type": "edit",
+      "id": "31333749372d63c9",
+      "item": {
+        "type": "code",
+        "id": "31333749372d63c9",
+        "text": "          args:\n            - /nginx-ingress-controller\n            - '--configmap=$(POD_NAMESPACE)/tectonic-custom-error'\n            - '--tcp-services-configmap=default/tcp-services-configmap'\n            - '--udp-services-configmap=default/udp-services-configmap'\n            - '--default-backend-service=$(POD_NAMESPACE)/default-http-backend'\n            - '--default-ssl-certificate=tectonic-system/tectonic-ingress-tls-secret'\n            - '--ingress-class=tectonic'"
+      },
+      "date": 1560036162987
+    }
+  ]
+}
