@@ -10,6 +10,11 @@
       "type": "paragraph",
       "id": "565200eefde84aed",
       "text": "Open other [[http ports in ingress-nginx]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "929da91a22f1b3bd",
+      "text": "Open [[data ports in ingress-nginx]] and use [[config maps to assign ports to services]]"
     }
   ],
   "journal": [
@@ -69,6 +74,17 @@
         "text": "Open other [[http ports in ingress-nginx]]"
       },
       "date": 1560015009572
+    },
+    {
+      "type": "add",
+      "id": "929da91a22f1b3bd",
+      "item": {
+        "type": "paragraph",
+        "id": "929da91a22f1b3bd",
+        "text": "Open [[data ports in ingress-nginx]] and use [[config maps to assign ports to services]]"
+      },
+      "after": "565200eefde84aed",
+      "date": 1560018188006
     }
   ]
 }
