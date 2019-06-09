@@ -55,6 +55,11 @@
       "type": "code",
       "id": "31333749372d63c9",
       "text": "          args:\n            - /nginx-ingress-controller\n            - '--configmap=$(POD_NAMESPACE)/tectonic-custom-error'\n            - '--tcp-services-configmap=default/tcp-services-configmap'\n            - '--udp-services-configmap=default/udp-services-configmap'\n            - '--default-backend-service=$(POD_NAMESPACE)/default-http-backend'\n            - '--default-ssl-certificate=tectonic-system/tectonic-ingress-tls-secret'\n            - '--ingress-class=tectonic'"
+    },
+    {
+      "type": "paragraph",
+      "id": "a0217b639be45bbd",
+      "text": "Create and populate the [[config maps to assign ports to services]]."
     }
   ],
   "journal": [
@@ -221,6 +226,17 @@
         "text": "          args:\n            - /nginx-ingress-controller\n            - '--configmap=$(POD_NAMESPACE)/tectonic-custom-error'\n            - '--tcp-services-configmap=default/tcp-services-configmap'\n            - '--udp-services-configmap=default/udp-services-configmap'\n            - '--default-backend-service=$(POD_NAMESPACE)/default-http-backend'\n            - '--default-ssl-certificate=tectonic-system/tectonic-ingress-tls-secret'\n            - '--ingress-class=tectonic'"
       },
       "date": 1560036162987
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "a0217b639be45bbd",
+        "text": "Create and populate the [[config maps to assign ports to services]]."
+      },
+      "after": "31333749372d63c9",
+      "id": "a0217b639be45bbd",
+      "date": 1560075315244
     }
   ]
 }

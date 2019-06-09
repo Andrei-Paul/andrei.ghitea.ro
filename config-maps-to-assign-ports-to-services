@@ -1,0 +1,302 @@
+{
+  "title": "Config maps to assign ports to services",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "95698d969786534d",
+      "text": "Under [ 📁Workloads ], select:"
+    },
+    {
+      "type": "markdown",
+      "id": "5683bfca5bd942c3",
+      "text": "> Config Maps"
+    },
+    {
+      "type": "paragraph",
+      "id": "532961624f627f2e",
+      "text": "From the [ Namespace: ] dropdown, select the namespace given in the config map path used to configure [[data ports in ingress-nginx]]."
+    },
+    {
+      "type": "paragraph",
+      "id": "c768950e04ff7b0b",
+      "text": "For example, select:"
+    },
+    {
+      "type": "paragraph",
+      "id": "87102eeb139fe023",
+      "text": "default"
+    },
+    {
+      "type": "paragraph",
+      "id": "5f88261b2bd8288d",
+      "text": "In the [ Config Maps ] list, create, if not already created, a config map with a name as used to configure [[data ports in ingress-nginx]]."
+    },
+    {
+      "type": "paragraph",
+      "id": "39065dcdfa0a4940",
+      "text": "In the [ Config Maps ] list, locate and select the config map."
+    },
+    {
+      "type": "paragraph",
+      "id": "adf46ae5f32c4cf0",
+      "text": "For example, select:"
+    },
+    {
+      "type": "paragraph",
+      "id": "044a444416c30e3c",
+      "text": "⚙(CM) tcp-services-configmap"
+    },
+    {
+      "type": "paragraph",
+      "id": "6f33b2d9623d9542",
+      "text": "Select the [ YAML ] tab and locate the data section:"
+    },
+    {
+      "type": "code",
+      "id": "19867ad09e489231",
+      "text": "kind: ConfigMap\napiVersion: v1\nmetadata:\n  name: tcp-services-configmap\n  namespace: default\ndata:"
+    },
+    {
+      "type": "paragraph",
+      "id": "c6f27150c0bc6f5a",
+      "text": "Append your port description giving it a desired port number as a name. As a value give it a service path followed by the port number to be used and, optionally, PROXY flags that the desired port will use Proxy Protocol in it's input and / or at the service port input."
+    },
+    {
+      "type": "paragraph",
+      "id": "6d4bba9388d040ed",
+      "text": "For example, appending DNS and LDAPS port descriptions for DNS and LDAPS services:"
+    },
+    {
+      "type": "code",
+      "id": "27fa411f81c240db",
+      "text": "kind: ConfigMap\napiVersion: v1\nmetadata:\n  name: tcp-services-configmap\n  namespace: default\ndata:\n  '53': 'default/named-service:53'\n  '636': 'default/openldap-service:636'"
+    },
+    {
+      "type": "paragraph",
+      "id": "8e7ea5d956bb689f",
+      "text": "For example, appending MySQL port description for MySQL service that expects Proxy Protocol at the service port input, but NOT at it's input:"
+    },
+    {
+      "type": "code",
+      "id": "8ae49f046738057b",
+      "text": "kind: ConfigMap\napiVersion: v1\nmetadata:\n  name: tcp-services-configmap\n  namespace: default\ndata:\n  '53': 'default/named-service:53'\n  '636': 'default/openldap-service:636'\n  '3306': 'default/mariadb-service:3306::PROXY'"
+    },
+    {
+      "type": "paragraph",
+      "id": "9665426f31a2c2cf",
+      "text": "For example, appending NginX port description for NginX service that expects Proxy Protocol at the service port input AND at it's input:"
+    },
+    {
+      "type": "code",
+      "id": "f002a59ad13bb9f0",
+      "text": "kind: ConfigMap\napiVersion: v1\nmetadata:\n  name: tcp-services-configmap\n  namespace: default\ndata:\n  '53': 'default/named-service:53'\n  '636': 'default/openldap-service:636'\n  '3306': 'default/mariadb-service:3306::PROXY'\n  '8880': 'default/nginx-service:80:PROXY:PROXY'"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Config maps to assign ports to services",
+        "story": []
+      },
+      "date": 1560032895036
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "95698d969786534d",
+        "text": "Under [ 📁Workloads ], select:"
+      },
+      "id": "95698d969786534d",
+      "date": 1560074714286
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "5683bfca5bd942c3",
+        "text": "> Config Maps"
+      },
+      "after": "95698d969786534d",
+      "id": "5683bfca5bd942c3",
+      "date": 1560074752627
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "532961624f627f2e",
+        "text": "From the [ Namespace: ] dropdown, select the namespace given in the config map path used to configure [[data ports in ingress-nginx]]."
+      },
+      "after": "5683bfca5bd942c3",
+      "id": "532961624f627f2e",
+      "date": 1560074952982
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "c768950e04ff7b0b",
+        "text": "For example, select:"
+      },
+      "after": "532961624f627f2e",
+      "id": "c768950e04ff7b0b",
+      "date": 1560074959694
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "87102eeb139fe023",
+        "text": "default"
+      },
+      "after": "c768950e04ff7b0b",
+      "id": "87102eeb139fe023",
+      "date": 1560074962348
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "5f88261b2bd8288d",
+        "text": "In the [ Config Maps ] list, create, if not already created, a config map with a name as used to configure [[data ports in ingress-nginx]]."
+      },
+      "after": "87102eeb139fe023",
+      "id": "5f88261b2bd8288d",
+      "date": 1560074969073
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "39065dcdfa0a4940",
+        "text": "In the [ Config Maps ] list, locate and select the config map."
+      },
+      "after": "5f88261b2bd8288d",
+      "id": "39065dcdfa0a4940",
+      "date": 1560074989977
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "adf46ae5f32c4cf0",
+        "text": "For example, select:"
+      },
+      "after": "39065dcdfa0a4940",
+      "id": "adf46ae5f32c4cf0",
+      "date": 1560074994507
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "044a444416c30e3c",
+        "text": "⚙(CM) tcp-services-configmap"
+      },
+      "after": "adf46ae5f32c4cf0",
+      "id": "044a444416c30e3c",
+      "date": 1560075017066
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "6f33b2d9623d9542",
+        "text": "Select the [ YAML ] tab and locate the data section:"
+      },
+      "after": "044a444416c30e3c",
+      "id": "6f33b2d9623d9542",
+      "date": 1560075024460
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "19867ad09e489231",
+        "text": "kind: ConfigMap\napiVersion: v1\nmetadata:\n  name: tcp-services-configmap\n  namespace: default\ndata:"
+      },
+      "after": "6f33b2d9623d9542",
+      "id": "19867ad09e489231",
+      "date": 1560075029769
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "c6f27150c0bc6f5a",
+        "text": "Append your port description giving it a desired port number as a name. As a value give it a service path followed by the port number to be used and, optionally, PROXY flags that the desired port will use Proxy Protocol in it's input and / or at the service port input."
+      },
+      "after": "19867ad09e489231",
+      "id": "c6f27150c0bc6f5a",
+      "date": 1560075108645
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "6d4bba9388d040ed",
+        "text": "For example, appending DNS and LDAPS port descriptions for DNS and LDAPS services:"
+      },
+      "after": "c6f27150c0bc6f5a",
+      "id": "6d4bba9388d040ed",
+      "date": 1560075114075
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "27fa411f81c240db",
+        "text": "kind: ConfigMap\napiVersion: v1\nmetadata:\n  name: tcp-services-configmap\n  namespace: default\ndata:\n  '53': 'default/named-service:53'\n  '636': 'default/openldap-service:636'"
+      },
+      "after": "6d4bba9388d040ed",
+      "id": "27fa411f81c240db",
+      "date": 1560075121154
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "8e7ea5d956bb689f",
+        "text": "For example, appending MySQL port description for MySQL service that expects Proxy Protocol at the service port input, but NOT at it's input:"
+      },
+      "after": "27fa411f81c240db",
+      "id": "8e7ea5d956bb689f",
+      "date": 1560075165321
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "8ae49f046738057b",
+        "text": "kind: ConfigMap\napiVersion: v1\nmetadata:\n  name: tcp-services-configmap\n  namespace: default\ndata:\n  '53': 'default/named-service:53'\n  '636': 'default/openldap-service:636'\n  '3306': 'default/mariadb-service:3306::PROXY'"
+      },
+      "after": "8e7ea5d956bb689f",
+      "id": "8ae49f046738057b",
+      "date": 1560075172010
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "9665426f31a2c2cf",
+        "text": "For example, appending NginX port description for NginX service that expects Proxy Protocol at the service port input AND at it's input:"
+      },
+      "after": "8ae49f046738057b",
+      "id": "9665426f31a2c2cf",
+      "date": 1560075186642
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "f002a59ad13bb9f0",
+        "text": "kind: ConfigMap\napiVersion: v1\nmetadata:\n  name: tcp-services-configmap\n  namespace: default\ndata:\n  '53': 'default/named-service:53'\n  '636': 'default/openldap-service:636'\n  '3306': 'default/mariadb-service:3306::PROXY'\n  '8880': 'default/nginx-service:80:PROXY:PROXY'"
+      },
+      "after": "9665426f31a2c2cf",
+      "id": "f002a59ad13bb9f0",
+      "date": 1560075190866
+    }
+  ]
+}
