@@ -15,6 +15,16 @@
       "type": "paragraph",
       "id": "929da91a22f1b3bd",
       "text": "Open [[data ports in ingress-nginx]] and use [[config maps to assign ports to services]]"
+    },
+    {
+      "type": "pagefold",
+      "id": "1da062743439555e",
+      "text": "Tectonic Issues"
+    },
+    {
+      "type": "paragraph",
+      "id": "824e59dac3794fa3",
+      "text": "Fix [[The program docker is managed by torcx, which did not run]] issue on Tectonic nodes"
     }
   ],
   "journal": [
@@ -85,6 +95,46 @@
       },
       "after": "565200eefde84aed",
       "date": 1560018188006
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1da062743439555e"
+      },
+      "id": "1da062743439555e",
+      "type": "add",
+      "after": "929da91a22f1b3bd",
+      "date": 1566078282736
+    },
+    {
+      "type": "edit",
+      "id": "1da062743439555e",
+      "item": {
+        "type": "pagefold",
+        "id": "1da062743439555e",
+        "text": "Tectonic Issues"
+      },
+      "date": 1566078326126
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "824e59dac3794fa3"
+      },
+      "id": "824e59dac3794fa3",
+      "type": "add",
+      "after": "1da062743439555e",
+      "date": 1566078355016
+    },
+    {
+      "type": "edit",
+      "id": "824e59dac3794fa3",
+      "item": {
+        "type": "paragraph",
+        "id": "824e59dac3794fa3",
+        "text": "Fix [[The program docker is managed by torcx, which did not run]] issue on Tectonic nodes"
+      },
+      "date": 1566078420272
     }
   ]
 }
