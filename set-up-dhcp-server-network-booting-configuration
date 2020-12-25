@@ -1,0 +1,164 @@
+{
+  "title": "Set up DHCP Server network booting configuration",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "8853883391d94b3d",
+      "text": "Assumption, TFTP Server IP is:"
+    },
+    {
+      "type": "markdown",
+      "id": "dd82ebe0f01e9ce9",
+      "text": "> 192.168.0.1\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "4b6c9c11cc73353b",
+      "text": "Under [ Other Options ], select:"
+    },
+    {
+      "type": "markdown",
+      "id": "b85279835c345c8a",
+      "text": "Network Booting&emsp;&emsp;⚙ Display Advanced"
+    },
+    {
+      "type": "paragraph",
+      "id": "9bac0566da4e09d7",
+      "text": "Under [ Other Options ], under [ Network Booting ], set:"
+    },
+    {
+      "type": "markdown",
+      "id": "3c173cde5b7d76a4",
+      "text": "Enable&emsp;&emsp;✅ Enables network booting"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Set up DHCP Server network booting configuration",
+        "story": []
+      },
+      "date": 1608936592897
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8853883391d94b3d"
+      },
+      "id": "8853883391d94b3d",
+      "type": "add",
+      "date": 1608936649248
+    },
+    {
+      "type": "edit",
+      "id": "8853883391d94b3d",
+      "item": {
+        "type": "paragraph",
+        "id": "8853883391d94b3d",
+        "text": "Assumption, TFTP Server IP is:"
+      },
+      "date": 1608936652377
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dd82ebe0f01e9ce9"
+      },
+      "id": "dd82ebe0f01e9ce9",
+      "type": "add",
+      "after": "8853883391d94b3d",
+      "date": 1608936678664
+    },
+    {
+      "type": "edit",
+      "id": "dd82ebe0f01e9ce9",
+      "item": {
+        "type": "markdown",
+        "id": "dd82ebe0f01e9ce9",
+        "text": "> 192.168.0.1\n"
+      },
+      "date": 1608936683304
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4b6c9c11cc73353b"
+      },
+      "id": "4b6c9c11cc73353b",
+      "type": "add",
+      "after": "dd82ebe0f01e9ce9",
+      "date": 1608936691085
+    },
+    {
+      "type": "edit",
+      "id": "4b6c9c11cc73353b",
+      "item": {
+        "type": "paragraph",
+        "id": "4b6c9c11cc73353b",
+        "text": "Under [ Other Options ], select:"
+      },
+      "date": 1608936694665
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b85279835c345c8a"
+      },
+      "id": "b85279835c345c8a",
+      "type": "add",
+      "after": "4b6c9c11cc73353b",
+      "date": 1608936700229
+    },
+    {
+      "type": "edit",
+      "id": "b85279835c345c8a",
+      "item": {
+        "type": "markdown",
+        "id": "b85279835c345c8a",
+        "text": "Network Booting&emsp;&emsp;⚙ Display Advanced"
+      },
+      "date": 1608936703766
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9bac0566da4e09d7"
+      },
+      "id": "9bac0566da4e09d7",
+      "type": "add",
+      "after": "b85279835c345c8a",
+      "date": 1608936724408
+    },
+    {
+      "type": "edit",
+      "id": "9bac0566da4e09d7",
+      "item": {
+        "type": "paragraph",
+        "id": "9bac0566da4e09d7",
+        "text": "Under [ Other Options ], under [ Network Booting ], set:"
+      },
+      "date": 1608936726807
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3c173cde5b7d76a4"
+      },
+      "id": "3c173cde5b7d76a4",
+      "type": "add",
+      "after": "9bac0566da4e09d7",
+      "date": 1608936731156
+    },
+    {
+      "type": "edit",
+      "id": "3c173cde5b7d76a4",
+      "item": {
+        "type": "markdown",
+        "id": "3c173cde5b7d76a4",
+        "text": "Enable&emsp;&emsp;✅ Enables network booting"
+      },
+      "date": 1608936734438
+    }
+  ]
+}
