@@ -30,6 +30,11 @@
       "type": "pagefold",
       "id": "a395d1620d786587",
       "text": "PXE Boot"
+    },
+    {
+      "type": "paragraph",
+      "id": "a90220db5f0a992d",
+      "text": "Configure pfSense to [[set up DHCP Server network booting configuration]]"
     }
   ],
   "journal": [
@@ -160,6 +165,26 @@
         "text": "PXE Boot"
       },
       "date": 1608919102338
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a90220db5f0a992d"
+      },
+      "id": "a90220db5f0a992d",
+      "type": "add",
+      "after": "a395d1620d786587",
+      "date": 1608919578310
+    },
+    {
+      "type": "edit",
+      "id": "a90220db5f0a992d",
+      "item": {
+        "type": "paragraph",
+        "id": "a90220db5f0a992d",
+        "text": "Configure pfSense to [[set up DHCP Server network booting configuration]]"
+      },
+      "date": 1608919748871
     }
   ]
 }
