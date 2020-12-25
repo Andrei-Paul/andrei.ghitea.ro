@@ -25,6 +25,11 @@
       "type": "paragraph",
       "id": "824e59dac3794fa3",
       "text": "Fix [[The program docker is managed by torcx, which did not run]] issue on Tectonic nodes"
+    },
+    {
+      "type": "pagefold",
+      "id": "a395d1620d786587",
+      "text": "PXE Boot"
     }
   ],
   "journal": [
@@ -135,6 +140,26 @@
         "text": "Fix [[The program docker is managed by torcx, which did not run]] issue on Tectonic nodes"
       },
       "date": 1566078420272
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a395d1620d786587"
+      },
+      "id": "a395d1620d786587",
+      "type": "add",
+      "after": "824e59dac3794fa3",
+      "date": 1608919064981
+    },
+    {
+      "type": "edit",
+      "id": "a395d1620d786587",
+      "item": {
+        "type": "pagefold",
+        "id": "a395d1620d786587",
+        "text": "PXE Boot"
+      },
+      "date": 1608919102338
     }
   ]
 }
