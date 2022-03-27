@@ -3,6 +3,16 @@
   "story": [
     {
       "type": "pagefold",
+      "id": "b620cd5146901303",
+      "text": "Typhoon"
+    },
+    {
+      "type": "paragraph",
+      "id": "d161f7b212812311",
+      "text": "Manually [[renew expired certificate authority]]"
+    },
+    {
+      "type": "pagefold",
       "id": "376ed352498101d4",
       "text": "Tectonic"
     },
@@ -185,6 +195,45 @@
         "text": "Configure pfSense to [[set up DHCP Server network booting configuration]]"
       },
       "date": 1608919748871
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b620cd5146901303"
+      },
+      "id": "b620cd5146901303",
+      "type": "add",
+      "date": 1648388230898
+    },
+    {
+      "type": "edit",
+      "id": "b620cd5146901303",
+      "item": {
+        "type": "pagefold",
+        "id": "b620cd5146901303",
+        "text": "Typhoon"
+      },
+      "date": 1648388250678
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d161f7b212812311"
+      },
+      "id": "d161f7b212812311",
+      "type": "add",
+      "after": "b620cd5146901303",
+      "date": 1648388438414
+    },
+    {
+      "type": "edit",
+      "id": "d161f7b212812311",
+      "item": {
+        "type": "paragraph",
+        "id": "d161f7b212812311",
+        "text": "Manually [[renew expired certificate authority]]"
+      },
+      "date": 1648388492044
     }
   ]
 }
